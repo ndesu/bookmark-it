@@ -1,13 +1,13 @@
 import { initializeApp, getApps } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
- export const firebaseConfig = {
-    apiKey: "AIzaSyAIeCq-ttFEhMN4U7MhSm3CE2wCOdne55Y",
+export const firebaseConfig = {
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
     authDomain: "dynamicweb-final.firebaseapp.com",
     projectId: "dynamicweb-final",
     storageBucket: "dynamicweb-final.firebasestorage.app",
-    messagingSenderId: "1093245485374",
-    appId: "1:1093245485374:web:894b0bfae24951c0b7ac6f"
+    messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_APP_ID
 };
 
 Object.keys(firebaseConfig).forEach((key) => {
